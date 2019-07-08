@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hcn"></p>
+<p1 id="hcn1"></p1>
+     <script>
+         let Rectangle = function (length,width) {
+          this.length=length;
+          this.width=width;
+
+          this.getLength=function () {
+              return this.length;
+          };
+          this.getWidth=function () {
+              return this.width;
+          };
+          this.getArea=function () {
+              return this.width*this.length;
+          };
+          this.getParameter=function () {
+              return (this.width+this.length)*2;
+          };
+
+             this.setLength=function (length) {
+              this.length=length;
+          };
+          this.setWidth=function (width) {
+              this.width=width;
+          };
+             
+         };
+         let rectangle= new  Rectangle(300,500);
+         let area = rectangle.getArea();
+         let perimeter= rectangle.getParameter();
+         let length= rectangle.getLength();
+         let width=rectangle.getWidth();
+         let canvas = "<canvas width='"+ width + "' height='"+length+"' style='border:2px solid #000000;'></canvas>";
+         document.getElementById("hcn").innerHTML= canvas
+         document.write("Area: "+area+"---- Perimeter: "+perimeter);
+
+
+
+     </script>
+</body>
+</html>
